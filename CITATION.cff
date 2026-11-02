@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite the exact released and archived version used in your work."
+type: software
+title: "Pipeline support identification and dynamic strain prediction: reproducibility code and numerical data"
+authors:
+  - family-names: Xing
+    given-names: Jiahui
+  - family-names: Cai
+    given-names: Erxuan
+  - family-names: Gao
+    given-names: Zhiran
+  - family-names: Xu
+    given-names: Zhexi
+  - family-names: Wen
+    given-names: Minjie
+  - family-names: Zhang
+    given-names: Yiming
+abstract: "Numerical study of uncertainty propagation from static test loads and identified pipeline support into dynamic bending-strain predictions. Strain observations are synthetic."
+keywords:
+  - soil-pipe interaction
+  - support identification
+  - dynamic strain
+  - load uncertainty

@@ -1,0 +1,17 @@
+# Local environments and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+# Static records distributed as the static-results.zip release asset
+/static/results_*/
+/static/summaries_*/
+# Newly calculated outputs; keep distributed evidence intact
+/static/rerun_*/
+/dynamic/rerun_*/
+/regenerated_figures/
+/regenerated_load_summary/
+/regenerated_continuum_summary/
