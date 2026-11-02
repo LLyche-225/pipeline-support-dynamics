@@ -1,0 +1,693 @@
+{
+  "task": "audit/task_layer.md (DYNAMIC_PROTOCOL step 4)",
+  "created_epoch_s": 1793601166.444006,
+  "elapsed_s": 39.83847912494093,
+  "budget_s": 2400.0,
+  "budget_exhausted": false,
+  "parameters": {
+    "m_line_kg_m": 400.0,
+    "rho_soil_kg_m3": 1800.0,
+    "zeta_target": 0.02,
+    "rayleigh_alpha": 0.4569589314312427,
+    "rayleigh_beta": 0.0002893726238034461,
+    "rayleigh_rule": "C = alpha M + beta K, exact zeta at 2 and 20 Hz, identical rule and coefficients in both model families",
+    "force_N": 1000.0,
+    "footprint_m": 4.3,
+    "load_center_m": 6.0,
+    "gauge_length_m": 0.2,
+    "gauge_points": "61 in [-12, 12] m",
+    "EI_N_m2": 162321230.0,
+    "radius_m": 0.3,
+    "interface_stiffness_N_m2": 36000000.0,
+    "soil_nu": 0.3,
+    "width_m": 0.6,
+    "layer_depth_m": 10.0,
+    "half_domain_m": 50.0,
+    "frequencies_hz": [
+      2.0,
+      5.0,
+      10.0,
+      20.0
+    ],
+    "production_h_m": 0.25,
+    "mesh_study_h_m": [
+      0.5,
+      0.25,
+      0.125
+    ],
+    "convergence_tol_complex_L2": 0.01
+  },
+  "calibration": {
+    "source": "inputs/layer_calibration.json",
+    "sha256": "9cad0071c52a7faee96ba7ae42cb9ea8f9d9ec09ed58242a167b8a99db091a83",
+    "records": {
+      "50000000": {
+        "k0_N_m2": 4899684.222523651,
+        "source": "results_continuum/calibration/E50MPa.json",
+        "source_sha256": "39e2a0ff6e7887e26f10b7fdafd43de53798395b6fe11d4565ac5232eb33bff4",
+        "sibling_hash_verified": true
+      },
+      "200000000": {
+        "k0_N_m2": 15445936.257682828,
+        "source": "results_continuum/calibration/E200MPa.json",
+        "source_sha256": "c5d55ff8964d8f397545435cb74c8782b8e80546172722c29963b1044db7c03f",
+        "sibling_hash_verified": true
+      }
+    }
+  },
+  "transfer_assumption": "Comparator spring k(x) = k0_calib(E) * (1 - d(x)): the same dimensionless reduction as the layer interface loss applied to the intact-calibrated uniform equivalent stiffness. Equality of physical interface fields is not claimed or tested.",
+  "boundary_condition_caveat": "Beam clamped at both domain ends; soil bottom fixed in both components; soil sides are vertical rollers (horizontal displacement fixed, vertical free). Finite fixture, not a half-space impedance model. The +/-60 m extent check also lengthens the clamped beam from 100 m to 120 m.",
+  "no_half_space_impedance_claim": true,
+  "verification": {
+    "rayleigh": {
+      "alpha": 0.4569589314312427,
+      "beta": 0.0002893726238034461,
+      "zeta_target": 0.02,
+      "f1_hz": 2.0,
+      "f2_hz": 20.0
+    },
+    "zero_frequency": {
+      "E50MPa_intact": {
+        "strain_relative_l2_vs_continuum_forward": 2.4627782864400996e-11,
+        "residual_relative": 4.885674840652398e-10,
+        "beam_mass_relative_error": 4.238245310261846e-14,
+        "soil_mass_relative_error": 0.0
+      },
+      "E50MPa_asymmetric": {
+        "strain_relative_l2_vs_continuum_forward": 3.180500085462422e-11,
+        "residual_relative": 4.989363091525785e-10,
+        "beam_mass_relative_error": 4.238245310261846e-14,
+        "soil_mass_relative_error": 0.0
+      },
+      "E200MPa_intact": {
+        "strain_relative_l2_vs_continuum_forward": 1.114989604847021e-11,
+        "residual_relative": 1.4312647618077633e-10,
+        "beam_mass_relative_error": 4.238245310261846e-14,
+        "soil_mass_relative_error": 0.0
+      }
+    },
+    "budget_exhausted": false
+  },
+  "worst_production_layer_residual_relative": 1.629643339485764e-09,
+  "worst_production_layer_power_balance_relative_error": 6.322469858276633e-11,
+  "case_metrics": [
+    {
+      "case_id": "E50MPa_intact_f2Hz",
+      "soil_E_Pa": 50000000.0,
+      "shape": "intact",
+      "freq_hz": 2.0,
+      "complex_L2": 0.12792757770315608,
+      "amp_norm_ratio": 0.9869296381542905,
+      "amp_ratio_max": 2.3730418278821346,
+      "amp_ratio_min": 0.04849308678933925,
+      "mesh_h_m": 0.25,
+      "converged": true,
+      "layer_residual_relative": 3.7411656848411074e-10,
+      "layer_power_balance_relative_error": 4.818479803627962e-13,
+      "layer_external_power_W": 0.0020502836160576627,
+      "local_residual_relative": 2.683141187890627e-10,
+      "local_power_balance_relative_error": 7.96634522474282e-12,
+      "status": "ok"
+    },
+    {
+      "case_id": "E50MPa_intact_f5Hz",
+      "soil_E_Pa": 50000000.0,
+      "shape": "intact",
+      "freq_hz": 5.0,
+      "complex_L2": 0.7062136299379375,
+      "amp_norm_ratio": 0.7130442945372378,
+      "amp_ratio_max": 1.6735286217944523,
+      "amp_ratio_min": 0.0020230491284588164,
+      "mesh_h_m": 0.25,
+      "converged": true,
+      "layer_residual_relative": 6.279049900938415e-10,
+      "layer_power_balance_relative_error": 5.566668555633397e-12,
+      "layer_external_power_W": 0.3914831201543711,
+      "local_residual_relative": 1.1614442308520958e-10,
+      "local_power_balance_relative_error": 1.6644082509219663e-11,
+      "status": "ok"
+    },
+    {
+      "case_id": "E50MPa_intact_f10Hz",
+      "soil_E_Pa": 50000000.0,
+      "shape": "intact",
+      "freq_hz": 10.0,
+      "complex_L2": 0.6708376591376412,
+      "amp_norm_ratio": 1.0891888040507105,
+      "amp_ratio_max": 4.267469352174638,
+      "amp_ratio_min": 0.014120472622861542,
+      "mesh_h_m": 0.25,
+      "converged": false,
+      "layer_residual_relative": 1.2995800555766337e-10,
+      "layer_power_balance_relative_error": 4.988856286217822e-12,
+      "layer_external_power_W": 0.16102480788200144,
+      "local_residual_relative": 1.321608229788041e-10,
+      "local_power_balance_relative_error": 1.7847079840070338e-11,
+      "status": "ok"
+    },
+    {
+      "case_id": "E50MPa_intact_f20Hz",
+      "soil_E_Pa": 50000000.0,
+      "shape": "intact",
+      "freq_hz": 20.0,
+      "complex_L2": 4.230768829608583,
+      "amp_norm_ratio": 4.588559546656584,
+      "amp_ratio_max": 9.713756945070624,
+      "amp_ratio_min": 1.4286427404750237,
+      "mesh_h_m": 0.25,
+      "converged": false,
+      "layer_residual_relative": 2.5995467106793817e-11,
+      "layer_power_balance_relative_error": 7.047893989073021e-13,
+      "layer_external_power_W": 0.2612560417614487,
+      "local_residual_relative": 4.1069765987488067e-10,
+      "local_power_balance_relative_error": 2.0822949028529894e-11,
+      "status": "ok"
+    },
+    {
+      "case_id": "E50MPa_asymmetric_f2Hz",
+      "soil_E_Pa": 50000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 2.0,
+      "complex_L2": 0.12709199348263484,
+      "amp_norm_ratio": 0.9787156736886226,
+      "amp_ratio_max": 2.6421415511611075,
+      "amp_ratio_min": 0.007485117925219229,
+      "mesh_h_m": 0.25,
+      "converged": true,
+      "layer_residual_relative": 1.965490308402454e-10,
+      "layer_power_balance_relative_error": 6.322469858276633e-11,
+      "layer_external_power_W": 0.0020596664139893636,
+      "local_residual_relative": 5.286186946529196e-10,
+      "local_power_balance_relative_error": 1.9100632748384567e-11,
+      "status": "ok"
+    },
+    {
+      "case_id": "E50MPa_asymmetric_f5Hz",
+      "soil_E_Pa": 50000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 5.0,
+      "complex_L2": 0.7095428306279266,
+      "amp_norm_ratio": 0.7048658812322466,
+      "amp_ratio_max": 1.5134569899692787,
+      "amp_ratio_min": 0.0021000425935969636,
+      "mesh_h_m": 0.25,
+      "converged": true,
+      "layer_residual_relative": 1.629643339485764e-09,
+      "layer_power_balance_relative_error": 3.2914550609932826e-11,
+      "layer_external_power_W": 0.3916899396019611,
+      "local_residual_relative": 2.789583913712102e-10,
+      "local_power_balance_relative_error": 4.0598821646877656e-11,
+      "status": "ok"
+    },
+    {
+      "case_id": "E50MPa_asymmetric_f10Hz",
+      "soil_E_Pa": 50000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 10.0,
+      "complex_L2": 0.810974099933886,
+      "amp_norm_ratio": 1.1030308871949508,
+      "amp_ratio_max": 5.761406403718654,
+      "amp_ratio_min": 0.01078935042274011,
+      "mesh_h_m": 0.25,
+      "converged": false,
+      "layer_residual_relative": 2.560892891106301e-10,
+      "layer_power_balance_relative_error": 4.612423491955702e-12,
+      "layer_external_power_W": 0.16764344870499126,
+      "local_residual_relative": 9.210792505451283e-10,
+      "local_power_balance_relative_error": 1.1613887660619604e-11,
+      "status": "ok"
+    },
+    {
+      "case_id": "E50MPa_asymmetric_f20Hz",
+      "soil_E_Pa": 50000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 20.0,
+      "complex_L2": 4.488722219942188,
+      "amp_norm_ratio": 5.03186028763474,
+      "amp_ratio_max": 11.432950929725306,
+      "amp_ratio_min": 0.8664112788762636,
+      "mesh_h_m": 0.25,
+      "converged": false,
+      "layer_residual_relative": 8.899756700679622e-11,
+      "layer_power_balance_relative_error": 1.8432933033128682e-12,
+      "layer_external_power_W": 0.27416880422673623,
+      "local_residual_relative": 6.61198781256306e-10,
+      "local_power_balance_relative_error": 5.880053969439049e-12,
+      "status": "ok"
+    },
+    {
+      "case_id": "E200MPa_intact_f2Hz",
+      "soil_E_Pa": 200000000.0,
+      "shape": "intact",
+      "freq_hz": 2.0,
+      "complex_L2": 0.08708244102492325,
+      "amp_norm_ratio": 1.022753926784477,
+      "amp_ratio_max": 25.93307225477807,
+      "amp_ratio_min": 0.10986860754482716,
+      "mesh_h_m": 0.25,
+      "converged": true,
+      "layer_residual_relative": 9.157289252114442e-11,
+      "layer_power_balance_relative_error": 8.331577799672456e-12,
+      "layer_external_power_W": 0.0003416867384267629,
+      "local_residual_relative": 5.005870615743626e-11,
+      "local_power_balance_relative_error": 5.508373585473885e-12,
+      "status": "ok"
+    },
+    {
+      "case_id": "E200MPa_intact_f5Hz",
+      "soil_E_Pa": 200000000.0,
+      "shape": "intact",
+      "freq_hz": 5.0,
+      "complex_L2": 0.12179069418535243,
+      "amp_norm_ratio": 0.9867421672298641,
+      "amp_ratio_max": 5.223466213034317,
+      "amp_ratio_min": 0.05416376276306003,
+      "mesh_h_m": 0.25,
+      "converged": true,
+      "layer_residual_relative": 1.22940378915368e-10,
+      "layer_power_balance_relative_error": 1.0361456963453758e-11,
+      "layer_external_power_W": 0.0031499806093962237,
+      "local_residual_relative": 6.060350870627205e-11,
+      "local_power_balance_relative_error": 1.1167759635952208e-11,
+      "status": "ok"
+    },
+    {
+      "case_id": "E200MPa_intact_f10Hz",
+      "soil_E_Pa": 200000000.0,
+      "shape": "intact",
+      "freq_hz": 10.0,
+      "complex_L2": 0.670063611330346,
+      "amp_norm_ratio": 0.5459975023137743,
+      "amp_ratio_max": 1.145419983970464,
+      "amp_ratio_min": 0.0019219860401914926,
+      "mesh_h_m": 0.25,
+      "converged": true,
+      "layer_residual_relative": 2.955434744681358e-10,
+      "layer_power_balance_relative_error": 1.6830903329703047e-12,
+      "layer_external_power_W": 0.43730413023945197,
+      "local_residual_relative": 5.1561881550814556e-11,
+      "local_power_balance_relative_error": 1.325708248293384e-11,
+      "status": "ok"
+    },
+    {
+      "case_id": "E200MPa_intact_f20Hz",
+      "soil_E_Pa": 200000000.0,
+      "shape": "intact",
+      "freq_hz": 20.0,
+      "complex_L2": 0.6348996115959867,
+      "amp_norm_ratio": 1.3927460480383491,
+      "amp_ratio_max": 2.971277241364302,
+      "amp_ratio_min": 0.028031149065328442,
+      "mesh_h_m": 0.25,
+      "converged": false,
+      "layer_residual_relative": 3.987005592630035e-11,
+      "layer_power_balance_relative_error": 4.612616054957169e-13,
+      "layer_external_power_W": 0.17745069504010008,
+      "local_residual_relative": 6.52958123377083e-11,
+      "local_power_balance_relative_error": 8.135194910959785e-12,
+      "status": "ok"
+    },
+    {
+      "case_id": "E200MPa_asymmetric_f2Hz",
+      "soil_E_Pa": 200000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 2.0,
+      "complex_L2": 0.07820473735071633,
+      "amp_norm_ratio": 1.004321099023382,
+      "amp_ratio_max": 107.73372780511447,
+      "amp_ratio_min": 0.02964508085443818,
+      "mesh_h_m": 0.25,
+      "converged": true,
+      "layer_residual_relative": 3.232267573810102e-10,
+      "layer_power_balance_relative_error": 2.577638310541222e-13,
+      "layer_external_power_W": 0.0003467998933591161,
+      "local_residual_relative": 1.5818582749372115e-10,
+      "local_power_balance_relative_error": 3.64716337812213e-12,
+      "status": "ok"
+    },
+    {
+      "case_id": "E200MPa_asymmetric_f5Hz",
+      "soil_E_Pa": 200000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 5.0,
+      "complex_L2": 0.11348426650540298,
+      "amp_norm_ratio": 0.9672344907618154,
+      "amp_ratio_max": 4.109563127481299,
+      "amp_ratio_min": 0.05318040086577883,
+      "mesh_h_m": 0.25,
+      "converged": true,
+      "layer_residual_relative": 1.455301165758199e-10,
+      "layer_power_balance_relative_error": 2.2272643870979737e-12,
+      "layer_external_power_W": 0.0031907879645503437,
+      "local_residual_relative": 4.358176221635627e-11,
+      "local_power_balance_relative_error": 1.519219325354848e-11,
+      "status": "ok"
+    },
+    {
+      "case_id": "E200MPa_asymmetric_f10Hz",
+      "soil_E_Pa": 200000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 10.0,
+      "complex_L2": 0.6667033451241465,
+      "amp_norm_ratio": 0.5211352520953695,
+      "amp_ratio_max": 1.2024504218684988,
+      "amp_ratio_min": 0.0008765406381132383,
+      "mesh_h_m": 0.25,
+      "converged": true,
+      "layer_residual_relative": 8.138113821698266e-10,
+      "layer_power_balance_relative_error": 2.513752036381228e-11,
+      "layer_external_power_W": 0.4386387691411964,
+      "local_residual_relative": 9.261822023051041e-11,
+      "local_power_balance_relative_error": 1.5946144615609972e-11,
+      "status": "ok"
+    },
+    {
+      "case_id": "E200MPa_asymmetric_f20Hz",
+      "soil_E_Pa": 200000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 20.0,
+      "complex_L2": 0.6766230549751738,
+      "amp_norm_ratio": 1.3524238937791813,
+      "amp_ratio_max": 23.20487150583167,
+      "amp_ratio_min": 0.05394244642979382,
+      "mesh_h_m": 0.25,
+      "converged": false,
+      "layer_residual_relative": 4.953438083234695e-11,
+      "layer_power_balance_relative_error": 9.016740111136705e-13,
+      "layer_external_power_W": 0.18466285604966495,
+      "local_residual_relative": 2.2904715059788304e-10,
+      "local_power_balance_relative_error": 2.8984232723662768e-11,
+      "status": "ok"
+    }
+  ],
+  "mesh_study": [
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 50000000.0,
+      "shape": "intact",
+      "freq_hz": 2.0,
+      "delta_layer_0.5_to_0.25": 0.0026570285985724473,
+      "delta_local_0.5_to_0.25": 0.002140034468336972,
+      "status": "ok",
+      "converged_at_production": true
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 50000000.0,
+      "shape": "intact",
+      "freq_hz": 5.0,
+      "delta_layer_0.5_to_0.25": 0.02596848506631985,
+      "delta_local_0.5_to_0.25": 0.0020946060777403777,
+      "status": "ok",
+      "delta_layer_0.25_to_0.125": 0.006541618452259484,
+      "delta_local_0.25_to_0.125": 0.0001627811286880526,
+      "converged_at_production": true,
+      "refinement_seconds": 2.5085434578359127
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 50000000.0,
+      "shape": "intact",
+      "freq_hz": 10.0,
+      "delta_layer_0.5_to_0.25": 0.06570120773072859,
+      "delta_local_0.5_to_0.25": 0.001908507122785612,
+      "status": "ok",
+      "delta_layer_0.25_to_0.125": 0.018278420728640766,
+      "delta_local_0.25_to_0.125": 0.00014780816067796722,
+      "converged_at_production": false,
+      "refinement_seconds": 2.4153115411754698
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 50000000.0,
+      "shape": "intact",
+      "freq_hz": 20.0,
+      "delta_layer_0.5_to_0.25": 0.09843115109861386,
+      "delta_local_0.5_to_0.25": 0.0011647333710151494,
+      "status": "ok",
+      "delta_layer_0.25_to_0.125": 0.025049736803497043,
+      "delta_local_0.25_to_0.125": 8.946498594035113e-05,
+      "converged_at_production": false,
+      "refinement_seconds": 2.443660082994029
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 50000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 2.0,
+      "delta_layer_0.5_to_0.25": 0.0026138191872570114,
+      "delta_local_0.5_to_0.25": 0.0020050522882376167,
+      "status": "ok",
+      "converged_at_production": true
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 50000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 5.0,
+      "delta_layer_0.5_to_0.25": 0.025992478241557076,
+      "delta_local_0.5_to_0.25": 0.0019490133674668147,
+      "status": "ok",
+      "delta_layer_0.25_to_0.125": 0.006545990376219198,
+      "delta_local_0.25_to_0.125": 0.00015361806364022415,
+      "converged_at_production": true,
+      "refinement_seconds": 2.5364508328493685
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 50000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 10.0,
+      "delta_layer_0.5_to_0.25": 0.06842288703204041,
+      "delta_local_0.5_to_0.25": 0.0017055912715426814,
+      "status": "ok",
+      "delta_layer_0.25_to_0.125": 0.019146763892641264,
+      "delta_local_0.25_to_0.125": 0.00013461854825526858,
+      "converged_at_production": false,
+      "refinement_seconds": 2.4562573751900345
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 50000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 20.0,
+      "delta_layer_0.5_to_0.25": 0.10496104162470707,
+      "delta_local_0.5_to_0.25": 0.001204717903299418,
+      "status": "ok",
+      "delta_layer_0.25_to_0.125": 0.026769788180954737,
+      "delta_local_0.25_to_0.125": 9.542661537880209e-05,
+      "converged_at_production": false,
+      "refinement_seconds": 2.4736958749126643
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 200000000.0,
+      "shape": "intact",
+      "freq_hz": 2.0,
+      "delta_layer_0.5_to_0.25": 0.0034878917677337263,
+      "delta_local_0.5_to_0.25": 0.003018866246250029,
+      "status": "ok",
+      "converged_at_production": true
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 200000000.0,
+      "shape": "intact",
+      "freq_hz": 5.0,
+      "delta_layer_0.5_to_0.25": 0.0034788171594702967,
+      "delta_local_0.5_to_0.25": 0.0029993277814039437,
+      "status": "ok",
+      "converged_at_production": true
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 200000000.0,
+      "shape": "intact",
+      "freq_hz": 10.0,
+      "delta_layer_0.5_to_0.25": 0.030592414455274705,
+      "delta_local_0.5_to_0.25": 0.0029271314131343647,
+      "status": "ok",
+      "delta_layer_0.25_to_0.125": 0.007969416025351818,
+      "delta_local_0.25_to_0.125": 0.00023289272754896403,
+      "converged_at_production": true,
+      "refinement_seconds": 2.4382256250828505
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 200000000.0,
+      "shape": "intact",
+      "freq_hz": 20.0,
+      "delta_layer_0.5_to_0.25": 0.06437549927071137,
+      "delta_local_0.5_to_0.25": 0.0025872995852355084,
+      "status": "ok",
+      "delta_layer_0.25_to_0.125": 0.015541892291322466,
+      "delta_local_0.25_to_0.125": 0.00020353586235897863,
+      "converged_at_production": false,
+      "refinement_seconds": 2.439167083008215
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 200000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 2.0,
+      "delta_layer_0.5_to_0.25": 0.0034403595445316863,
+      "delta_local_0.5_to_0.25": 0.0029055860321702274,
+      "status": "ok",
+      "converged_at_production": true
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 200000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 5.0,
+      "delta_layer_0.5_to_0.25": 0.0034314738093186355,
+      "delta_local_0.5_to_0.25": 0.002883150303765501,
+      "status": "ok",
+      "converged_at_production": true
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 200000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 10.0,
+      "delta_layer_0.5_to_0.25": 0.03060567335376547,
+      "delta_local_0.5_to_0.25": 0.002799129438372549,
+      "status": "ok",
+      "delta_layer_0.25_to_0.125": 0.007981307594124595,
+      "delta_local_0.25_to_0.125": 0.0002270888867374667,
+      "converged_at_production": true,
+      "refinement_seconds": 2.448439042083919
+    },
+    {
+      "h_m": 0.25,
+      "soil_E_Pa": 200000000.0,
+      "shape": "asymmetric",
+      "freq_hz": 20.0,
+      "delta_layer_0.5_to_0.25": 0.06886025497471018,
+      "delta_local_0.5_to_0.25": 0.0023669709960247444,
+      "status": "ok",
+      "delta_layer_0.25_to_0.125": 0.016533406559784254,
+      "delta_local_0.25_to_0.125": 0.00019337748002199072,
+      "converged_at_production": false,
+      "refinement_seconds": 2.460324625018984
+    }
+  ],
+  "boundary_sensitivity": [
+    {
+      "soil_E_Pa": 50000000.0,
+      "freq_hz": 2.0,
+      "h_m": 0.25,
+      "half_domain_compare_m": [
+        50,
+        60
+      ],
+      "status": "ok",
+      "delta_layer_L60_vs_L50": 9.44327734725999e-06,
+      "delta_local_L60_vs_L50": 8.486234747172224e-11
+    },
+    {
+      "soil_E_Pa": 50000000.0,
+      "freq_hz": 5.0,
+      "h_m": 0.25,
+      "half_domain_compare_m": [
+        50,
+        60
+      ],
+      "status": "ok",
+      "delta_layer_L60_vs_L50": 1.368322896894494,
+      "delta_local_L60_vs_L50": 9.267880955831048e-11
+    },
+    {
+      "soil_E_Pa": 50000000.0,
+      "freq_hz": 10.0,
+      "h_m": 0.25,
+      "half_domain_compare_m": [
+        50,
+        60
+      ],
+      "status": "ok",
+      "delta_layer_L60_vs_L50": 0.4731793446451869,
+      "delta_local_L60_vs_L50": 3.642147434044145e-10
+    },
+    {
+      "soil_E_Pa": 50000000.0,
+      "freq_hz": 20.0,
+      "h_m": 0.25,
+      "half_domain_compare_m": [
+        50,
+        60
+      ],
+      "status": "ok",
+      "delta_layer_L60_vs_L50": 0.2117902136990932,
+      "delta_local_L60_vs_L50": 0.11726715304785411
+    },
+    {
+      "soil_E_Pa": 200000000.0,
+      "freq_hz": 2.0,
+      "h_m": 0.25,
+      "half_domain_compare_m": [
+        50,
+        60
+      ],
+      "status": "ok",
+      "delta_layer_L60_vs_L50": 1.1814874587501365e-06,
+      "delta_local_L60_vs_L50": 8.962856484188008e-12
+    },
+    {
+      "soil_E_Pa": 200000000.0,
+      "freq_hz": 5.0,
+      "h_m": 0.25,
+      "half_domain_compare_m": [
+        50,
+        60
+      ],
+      "status": "ok",
+      "delta_layer_L60_vs_L50": 5.78437408633311e-06,
+      "delta_local_L60_vs_L50": 2.4235176995986745e-12
+    },
+    {
+      "soil_E_Pa": 200000000.0,
+      "freq_hz": 10.0,
+      "h_m": 0.25,
+      "half_domain_compare_m": [
+        50,
+        60
+      ],
+      "status": "ok",
+      "delta_layer_L60_vs_L50": 0.3865056123279874,
+      "delta_local_L60_vs_L50": 8.48563997760965e-12
+    },
+    {
+      "soil_E_Pa": 200000000.0,
+      "freq_hz": 20.0,
+      "h_m": 0.25,
+      "half_domain_compare_m": [
+        50,
+        60
+      ],
+      "status": "ok",
+      "delta_layer_L60_vs_L50": 0.2362531976358856,
+      "delta_local_L60_vs_L50": 1.031688688025005e-11
+    }
+  ],
+  "outputs": {
+    "fields_npz": "results/layer/layer_fields.npz",
+    "metrics_csv": "results/layer/layer_metrics.csv",
+    "mesh_study_csv": "results/layer/mesh_study.csv",
+    "boundary_csv": "results/layer/boundary_sensitivity.csv",
+    "figure": "manuscript/figures_v5/layer_transfer_mismatch.pdf",
+    "figure_data_csv": "results/layer/layer_figure_data.csv"
+  },
+  "commands": {
+    "run": "PYTHONPATH=code:vendor OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MPLCONFIGDIR=/tmp/mpl-layer python code/dynamic_layer_run.py",
+    "test": "PYTHONPATH=code:vendor OMP_NUM_THREADS=1 python -m pytest tests/test_dynamic_layer.py -q"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.16.1",
+    "skfem": "12.0.2",
+    "matplotlib": "3.11.1"
+  },
+  "deviations": []
+}

@@ -1,0 +1,38 @@
+{
+  "status": "design_frozen_before_formal_results_source_lock_pending",
+  "schema": "load-information-v3.0",
+  "primary": {
+    "shapes": ["intact", "asymmetric", "double", "broad_shallow"],
+    "load_standard_uncertainty": [0.01, 0.05, 0.10],
+    "sensors": [20], "strain_sigma": [0.000005],
+    "seeds": [1101, 1102, 1103, 1104, 1105, 1106]
+  },
+  "resolution": {
+    "shapes": ["intact", "asymmetric"],
+    "load_standard_uncertainty": [0.01, 0.10],
+    "sensors": [10, 20, 40], "strain_sigma": [0.000001, 0.000005, 0.000020],
+    "seeds": [1101, 1102, 1103, 1104]
+  },
+  "methods": ["fixed", "free", "calibrated", "oracle"],
+  "confidence_sensitivity": {
+    "primary_load_standard_uncertainty": 0.05,
+    "methods": {"overconfident": 0.2, "conservative": 3.0}
+  },
+  "force_generation": {
+    "true_multipliers": [1.0, 1.0, 1.0],
+    "calibration_mean": "1 + tau * z, with three independent z ~ Uniform(-sqrt(3),sqrt(3))",
+    "calibration_seed": "numpy.default_rng(SeedSequence([seed, 831])).uniform(-sqrt(3),sqrt(3),3)",
+    "strain_seed": "legacy generate_dataset calibrated regime default_rng(seed); paired across shape/tau/method",
+    "interpretation": "tau is the exact standard deviation of independent external load-measurement error; Gaussian penalty is a variance-weighted working objective, not a claimed posterior",
+    "bounds": [0.7, 1.3]
+  },
+  "regularization": {
+    "penalty": "h1", "lambda_path": [0.03, 0.3, 3, 30, 300, 3000],
+    "starts": [0.05, 0.30], "max_nfev": 200,
+    "selection": "largest successful lambda with whitened data-plus-calibration norm <= 1.2*sqrt(N+M); otherwise smallest successful norm and mark incompatible; M=3 for finite positive prior, otherwise M=0",
+    "truth_and_unused_response": "scoring only, never selection"
+  },
+  "resource_limit": {"blas_threads": 1, "parallel_paths": 1, "wall_time_limit_hours": 2},
+  "reporting": "paired medians and quartiles; six primary replicates and four resolution replicates, not independent physical specimens; retain all starts and failed candidates",
+  "continuum": "Separate independently verified model and intact-only calibration protocol to be frozen after numerical development, before defect inversion."
+}

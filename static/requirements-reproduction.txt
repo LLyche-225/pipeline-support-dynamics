@@ -1,0 +1,13 @@
+# Figure/summary reproduction environment for code/make_load_information_figures.py.
+# Pinned to the versions used for the verified v3 actual run on 2026-11-02
+# (Python 3.12.14). Numerical solvers are pinned in requirements.txt; this file
+# additionally records the plotting stack so the publication figures and the
+# vendored layout audit (vendor/figure_layout_audit.py, see
+# vendor/FIGURE_AUDIT_PROVENANCE.md) reproduce without any user-home paths.
+numpy==2.5.3
+scipy==1.16.1
+matplotlib==3.11.1
+pytest==8.4.2
+PyMuPDF==1.28.2
+pypdf==6.10.0
+Pillow==12.3.0

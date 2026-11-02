@@ -1,0 +1,16 @@
+{
+  "interface_rigid_error": 4.2596468915344136e-13,
+  "relative_force_error": 5.962016681830088e-12,
+  "surface_probe_error": 7.431594303335694e-19,
+  "reflection_relative_error": 6.908127006148612e-12,
+  "stiff_soil_winkler_relative_error": 0.00011711062711042555,
+  "mesh": {
+    "beam_dofs": 134,
+    "soil_dofs": 1474,
+    "total_dofs": 1608,
+    "free_dofs": 1450,
+    "soil_elements": 660,
+    "interface_quadrature": "4-point Gauss-Legendre",
+    "vector_probe_order_verified": true
+  }
+}

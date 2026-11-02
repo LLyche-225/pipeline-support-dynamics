@@ -1,0 +1,30 @@
+{
+  "rayleigh": {
+    "alpha": 0.4569589314312427,
+    "beta": 0.0002893726238034461,
+    "zeta_target": 0.02,
+    "f1_hz": 2.0,
+    "f2_hz": 20.0
+  },
+  "zero_frequency": {
+    "E50MPa_intact": {
+      "strain_relative_l2_vs_continuum_forward": 2.4627782864400996e-11,
+      "residual_relative": 4.885674840652398e-10,
+      "beam_mass_relative_error": 4.238245310261846e-14,
+      "soil_mass_relative_error": 0.0
+    },
+    "E50MPa_asymmetric": {
+      "strain_relative_l2_vs_continuum_forward": 3.180500085462422e-11,
+      "residual_relative": 4.989363091525785e-10,
+      "beam_mass_relative_error": 4.238245310261846e-14,
+      "soil_mass_relative_error": 0.0
+    },
+    "E200MPa_intact": {
+      "strain_relative_l2_vs_continuum_forward": 1.114989604847021e-11,
+      "residual_relative": 1.4312647618077633e-10,
+      "beam_mass_relative_error": 4.238245310261846e-14,
+      "soil_mass_relative_error": 0.0
+    }
+  },
+  "budget_exhausted": false
+}

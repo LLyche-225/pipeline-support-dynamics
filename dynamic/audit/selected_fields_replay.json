@@ -1,0 +1,12 @@
+{
+  "fields": 192,
+  "hashes": 619,
+  "input_sha256": "5b8bf0cbe4280a4a81f12f4d4999c60f840a0dca765d57c259df56fc8ddbee2c",
+  "datasets": 48,
+  "incompatible": 20,
+  "origins": {
+    "null_zero_field": 42,
+    "inherited": 150
+  },
+  "max_coefficient_error": 0.0
+}

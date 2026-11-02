@@ -1,0 +1,175 @@
+{
+  "schema_version": "load-information-layout-audit-v3.0",
+  "created_utc": "2026-11-02T03:52:53.763110Z",
+  "figures": {
+    "model": {
+      "warnings": [],
+      "inspection": {
+        "width_inches": 6.5,
+        "height_inches": 5.9,
+        "axes_count": 3,
+        "font_size_setting_pt": 10,
+        "text_sizes_pt": [
+          10.0
+        ],
+        "pdf_fonttype": 42,
+        "mathtext_fontset": "cm",
+        "serif_family": [
+          "cmr10"
+        ],
+        "media_box_width_pt": 468.0,
+        "media_box_height_pt": 424.8,
+        "fonts": [
+          "/FSNRKF+Cmmi10",
+          "/FGSTUK+Cmr10",
+          "/FPYHOW+Cmsy10"
+        ]
+      }
+    },
+    "load_quality": {
+      "warnings": [],
+      "inspection": {
+        "width_inches": 6.5,
+        "height_inches": 5.5,
+        "axes_count": 4,
+        "font_size_setting_pt": 10,
+        "text_sizes_pt": [
+          10.0
+        ],
+        "pdf_fonttype": 42,
+        "mathtext_fontset": "cm",
+        "serif_family": [
+          "cmr10"
+        ],
+        "media_box_width_pt": 468.0,
+        "media_box_height_pt": 396.0,
+        "fonts": [
+          "/FTUMPH+Cmmi10",
+          "/BCHSDU+Cmr10"
+        ]
+      }
+    },
+    "prediction_quality": {
+      "warnings": [],
+      "inspection": {
+        "width_inches": 6.5,
+        "height_inches": 3.55,
+        "axes_count": 2,
+        "font_size_setting_pt": 10,
+        "text_sizes_pt": [
+          10.0
+        ],
+        "pdf_fonttype": 42,
+        "mathtext_fontset": "cm",
+        "serif_family": [
+          "cmr10"
+        ],
+        "media_box_width_pt": 468.0,
+        "media_box_height_pt": 255.6,
+        "fonts": [
+          "/FTUMPH+Cmmi10",
+          "/QPGERN+Cmr10"
+        ]
+      }
+    },
+    "fields_prediction": {
+      "warnings": [],
+      "inspection": {
+        "width_inches": 6.5,
+        "height_inches": 6.25,
+        "axes_count": 4,
+        "font_size_setting_pt": 10,
+        "text_sizes_pt": [
+          10.0
+        ],
+        "pdf_fonttype": 42,
+        "mathtext_fontset": "cm",
+        "serif_family": [
+          "cmr10"
+        ],
+        "media_box_width_pt": 468.0,
+        "media_box_height_pt": 450.0,
+        "fonts": [
+          "/EGPWAI+Cmmi10",
+          "/DFZKKF+Cmr10",
+          "/FPYHOW+Cmsy10"
+        ]
+      }
+    },
+    "measurement_map": {
+      "warnings": [],
+      "inspection": {
+        "width_inches": 6.5,
+        "height_inches": 5.8,
+        "axes_count": 5,
+        "font_size_setting_pt": 10,
+        "text_sizes_pt": [
+          10.0
+        ],
+        "pdf_fonttype": 42,
+        "mathtext_fontset": "cm",
+        "serif_family": [
+          "cmr10"
+        ],
+        "media_box_width_pt": 468.0,
+        "media_box_height_pt": 417.6,
+        "fonts": [
+          "/EOZYCB+Cmmi10",
+          "/GYUCVO+Cmr10"
+        ]
+      }
+    },
+    "confidence": {
+      "warnings": [],
+      "inspection": {
+        "width_inches": 6.5,
+        "height_inches": 3.75,
+        "axes_count": 2,
+        "font_size_setting_pt": 10,
+        "text_sizes_pt": [
+          10.0
+        ],
+        "pdf_fonttype": 42,
+        "mathtext_fontset": "cm",
+        "serif_family": [
+          "cmr10"
+        ],
+        "media_box_width_pt": 468.0,
+        "media_box_height_pt": 270.0,
+        "fonts": [
+          "/FTUMPH+Cmmi10",
+          "/GYAGBQ+Cmr10"
+        ]
+      }
+    },
+    "information": {
+      "warnings": [],
+      "inspection": {
+        "width_inches": 6.5,
+        "height_inches": 3.55,
+        "axes_count": 1,
+        "font_size_setting_pt": 10,
+        "text_sizes_pt": [
+          10.0
+        ],
+        "pdf_fonttype": 42,
+        "mathtext_fontset": "cm",
+        "serif_family": [
+          "cmr10"
+        ],
+        "media_box_width_pt": 468.0,
+        "media_box_height_pt": 255.6,
+        "fonts": [
+          "/HETOVH+Cmmi10",
+          "/GYHXTL+Cmr10"
+        ]
+      }
+    }
+  },
+  "policy": {
+    "width_inches": 6.5,
+    "font_size_pt": 10,
+    "tight_bbox_used": false,
+    "note": "Warnings are retained for root visual review; qa-ignore is not applied."
+  }
+}

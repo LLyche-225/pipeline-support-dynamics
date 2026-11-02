@@ -1,0 +1,139 @@
+{
+ "schema_version": "beam-report-v1.0",
+ "runtime_s": 1.2092407918535173,
+ "fields_provenance": {
+  "source": "frozen inputs/static_fields.json",
+  "sha256": "5b8bf0cbe4280a4a81f12f4d4999c60f840a0dca765d57c259df56fc8ddbee2c",
+  "provisional": false
+ },
+ "verification": "audit/beam_verification.json",
+ "verification_gate": {
+  "ss_sine_analytic": {
+   "value": 5.176911779565575e-07,
+   "target": 0.01,
+   "pass": true
+  },
+  "zero_frequency_static": {
+   "value": 2.37156431297425e-05,
+   "target": 0.001,
+   "pass": true
+  },
+  "matched_reference": {
+   "value": 0.00038358514038085736,
+   "target": 0.01,
+   "pass": true
+  },
+  "fine_vs_finer": {
+   "value": 5.722867780762646e-05,
+   "target": 0.01,
+   "pass": true
+  },
+  "newmark_modal_pulse": {
+   "value": 0.0006189874539811762,
+   "target": 0.01,
+   "pass": true
+  },
+  "newmark_modal_harmonic": {
+   "value": 0.0011247368823530878,
+   "target": 0.01,
+   "pass": true
+  },
+  "step_halving": {
+   "value": 0.00024062726657346205,
+   "target": 0.02,
+   "pass": true
+  },
+  "newmark_independent": {
+   "value": 0.00020711927405722407,
+   "target": 0.01,
+   "pass": true
+  }
+ },
+ "verification_all_pass": true,
+ "frequencies": {
+  "ratios": [
+   0.25,
+   0.75,
+   1.0,
+   1.15
+  ],
+  "f0_hz": 33.76186185589148,
+  "omega0_rad_s": 212.13203435596427
+ },
+ "metric_rows": 1536,
+ "worst_rel_error": {
+  "overall": 28.883139862473428,
+  "by_channel": {
+   "force": 7.930980997280692,
+   "ground": 28.883139862473428
+  }
+ },
+ "median_rel_error": 0.06812239355768604,
+ "transient": {
+  "dt": 6.170670747442175e-05,
+  "dt_reference": 1.5426676868605437e-05,
+  "horizon_s": 0.08885765876316731,
+  "T": 0.02961921958772244,
+  "pulse": "sin^2(pi t/T), 0<t<T, T=1/f0",
+  "peaks": {
+   "calibrated": 5.467086043632878e-07,
+   "fixed": 5.825751273064383e-07,
+   "free": 5.464779282785192e-07,
+   "oracle": 5.424088813387637e-07,
+   "truth_production": 5.457076336240452e-07,
+   "reference_skfem_fine": 5.455986292718858e-07
+  },
+  "rel_errors_vs_reference": {
+   "calibrated": 0.08925577759625683,
+   "fixed": 0.38146570908314836,
+   "free": 0.08784076482489026,
+   "oracle": 0.0400590476781378,
+   "truth_production": 0.00020711927405722407
+  },
+  "fields": [
+   {
+    "method": "calibrated",
+    "key": "shape-asymmetric_tau-0.10000000000000001_sigma-5.0000000000000004e-06_sensors-20_seed-1101__method-calibrated",
+    "selected_origin": "inherited"
+   },
+   {
+    "method": "fixed",
+    "key": "shape-asymmetric_tau-0.10000000000000001_sigma-5.0000000000000004e-06_sensors-20_seed-1101__method-fixed",
+    "selected_origin": "inherited"
+   },
+   {
+    "method": "free",
+    "key": "shape-asymmetric_tau-0.10000000000000001_sigma-5.0000000000000004e-06_sensors-20_seed-1101__method-free",
+    "selected_origin": "inherited"
+   },
+   {
+    "method": "oracle",
+    "key": "shape-asymmetric_tau-0.10000000000000001_sigma-5.0000000000000004e-06_sensors-20_seed-1101__method-oracle",
+    "selected_origin": "inherited"
+   }
+  ]
+ },
+ "environment": {
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "scipy": "1.16.1",
+  "skfem": "12.0.2"
+ },
+ "output_meanings": {
+  "beam_metrics.csv": "one row per field x frequency x channel; rel_error = ||pred-ref||/||ref|| over 61 complex gauges",
+  "beam_responses.npz": "complex 61-gauge strain vectors per metric row",
+  "beam_medians.csv": "median rel_error over six seeds per group",
+  "beam_paired.csv": "per-seed rel_error wide table for paired diffs",
+  "beam_transient.npz": "pulse gauge-strain curves (4 methods + truth) and independent skfem fine reference",
+  "beam_transient_peaks.csv": "peak |strain| and transient rel errors"
+ },
+ "reproduce": {
+  "verify": "PYTHONPATH=code:vendor OPENBLAS_NUM_THREADS=1 python code/dynamic_beam_verify.py",
+  "run": "PYTHONPATH=code:vendor OPENBLAS_NUM_THREADS=1 python code/dynamic_beam_run.py",
+  "figures": "PYTHONPATH=code:vendor python code/dynamic_beam_figures.py",
+  "tests": "PYTHONPATH=code:vendor python -m pytest tests/test_dynamic_beam.py -q"
+ },
+ "deviations": [],
+ "notes": "Finite 100 m clamped fixture; six seeds are repetitions, not population inference; no dynamic inverse or field validation is claimed."
+}

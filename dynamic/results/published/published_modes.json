@@ -1,0 +1,112 @@
+{
+  "citation": "G. Banushi, Engineering Structures 352 (2026) 122080, DOI 10.1016/j.engstruct.2025.122080, arXiv:2507.22850v3, Tables 4-5",
+  "units": "rad/s (angular frequency, not cyclic Hz)",
+  "inputs": {
+    "L_m": 100.0,
+    "k_N_per_m2": 2503000.0,
+    "m_kg_per_m": 207.56,
+    "E_Pa": 210000000000.0,
+    "D_m": 1.067,
+    "t_m": 0.0079,
+    "J_table_m4": 0.0037
+  },
+  "I_exact_m4": 0.0036857174957670874,
+  "EI_exact": 774000674.1110884,
+  "EI_table_J0.0037": 777000000.0,
+  "free_free_roots_first18": [
+    4.730040744862704,
+    7.853204624095838,
+    10.995607838001671,
+    14.137165491257464,
+    17.27875965739948,
+    20.42035224562606,
+    23.561944902040455,
+    26.703537555508188,
+    29.845130209103253,
+    32.98672286269282,
+    36.128315516282626,
+    39.269908169872416,
+    42.411500823462205,
+    45.553093477052,
+    48.6946861306418,
+    51.83627878423159,
+    54.977871437821385,
+    58.119464091411174
+  ],
+  "skfem_refinements_nelem": [
+    100,
+    400
+  ],
+  "modes": [
+    {
+      "mode": 1,
+      "kind": "rigid",
+      "root_b": null,
+      "omega_analytic_exact_I_rad_s": 109.81422319235402,
+      "omega_analytic_J0.0037_rad_s": 109.81422319235402,
+      "omega_skfem_nelem100_rad_s": 109.81422319019046,
+      "omega_skfem_nelem400_rad_s": 109.81422299696912,
+      "omega_published_sa_rad_s": 109.804,
+      "omega_published_fem_rad_s": 109.805,
+      "discretization_fine_minus_analytic_rad_s": -1.953848993707652e-07,
+      "analytic_minus_published_fem_rad_s": 0.009223192354014031,
+      "rounding_J_minus_exact_rad_s": 0.0
+    },
+    {
+      "mode": 2,
+      "kind": "rigid",
+      "root_b": null,
+      "omega_analytic_exact_I_rad_s": 109.81422319235402,
+      "omega_analytic_J0.0037_rad_s": 109.81422319235402,
+      "omega_skfem_nelem100_rad_s": 109.81422319248244,
+      "omega_skfem_nelem400_rad_s": 109.81422321399388,
+      "omega_published_sa_rad_s": 109.813,
+      "omega_published_fem_rad_s": 109.811,
+      "discretization_fine_minus_analytic_rad_s": 2.1639863234668155e-08,
+      "analytic_minus_published_fem_rad_s": 0.003223192354013804,
+      "rounding_J_minus_exact_rad_s": 0.0
+    },
+    {
+      "mode": 6,
+      "kind": "flexural",
+      "root_b": 14.137165491257464,
+      "omega_analytic_exact_I_rad_s": 116.39882317145394,
+      "omega_analytic_J0.0037_rad_s": 116.42361476992285,
+      "omega_skfem_nelem100_rad_s": 116.39882671643964,
+      "omega_skfem_nelem400_rad_s": 116.39882319035594,
+      "omega_published_sa_rad_s": 116.147,
+      "omega_published_fem_rad_s": 116.107,
+      "discretization_fine_minus_analytic_rad_s": 1.8901999965237337e-08,
+      "analytic_minus_published_fem_rad_s": 0.29182317145394165,
+      "rounding_J_minus_exact_rad_s": 0.02479159846890866
+    },
+    {
+      "mode": 12,
+      "kind": "flexural",
+      "root_b": 32.98672286269282,
+      "omega_analytic_exact_I_rad_s": 237.08979002529276,
+      "omega_analytic_J0.0037_rad_s": 237.45033856224626,
+      "omega_skfem_nelem100_rad_s": 237.09131370479625,
+      "omega_skfem_nelem400_rad_s": 237.08979593106577,
+      "omega_published_sa_rad_s": 229.197,
+      "omega_published_fem_rad_s": 228.878,
+      "discretization_fine_minus_analytic_rad_s": 5.9057730084077775e-06,
+      "analytic_minus_published_fem_rad_s": 8.211790025292771,
+      "rounding_J_minus_exact_rad_s": 0.36054853695350175
+    },
+    {
+      "mode": 20,
+      "kind": "flexural",
+      "root_b": 58.119464091411174,
+      "omega_analytic_exact_I_rad_s": 661.4710834903848,
+      "omega_analytic_J0.0037_rad_s": 662.716220032843,
+      "omega_skfem_nelem100_rad_s": 661.5214006140731,
+      "omega_skfem_nelem400_rad_s": 661.4712824397723,
+      "omega_published_sa_rad_s": 585.293,
+      "omega_published_fem_rad_s": 585.863,
+      "discretization_fine_minus_analytic_rad_s": 0.0001989493874816617,
+      "analytic_minus_published_fem_rad_s": 75.60808349038473,
+      "rounding_J_minus_exact_rad_s": 1.2451365424582264
+    }
+  ]
+}

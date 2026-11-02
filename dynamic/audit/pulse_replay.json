@@ -1,0 +1,22 @@
+{
+  "fixed": {
+    "rms_ratio": 0.38146194736154393,
+    "peak_ratio": 1.0677723415606934,
+    "reference_peak_microstrain": 0.5455986292718858
+  },
+  "free": {
+    "rms_ratio": 0.08784022306282889,
+    "peak_ratio": 1.0016116218541125,
+    "reference_peak_microstrain": 0.5455986292718858
+  },
+  "calibrated": {
+    "rms_ratio": 0.08925517246823589,
+    "peak_ratio": 1.0020344163282595,
+    "reference_peak_microstrain": 0.5455986292718858
+  },
+  "oracle": {
+    "rms_ratio": 0.040064666013437174,
+    "peak_ratio": 0.9941536723493056,
+    "reference_peak_microstrain": 0.5455986292718858
+  }
+}

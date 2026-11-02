@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "groups": 104,
+  "statistic_checks": 2184,
+  "replicate_checks": 3864,
+  "source_paths": 848,
+  "summary": "summaries_load_information/load_information_summary.json",
+  "results": "results_load_information"
+}

@@ -1,0 +1,7 @@
+# Origin of the frozen dynamic inputs
+
+The matched-field population is fixed by the static study design: 4 shapes, 6 repetitions, 2 force-precision levels and 4 force treatments. Each row in static_fields.json is a complete selection, not a fit to vibration data. The 29 entries are the *interior* nonnegative cubic B-spline coefficients; boundary coefficients are zero. The origin, inherited residual status and source hashes distinguish admissible intact endpoints from ordinary finite-penalty selections. The relative source paths refer to the static research archive, not to field measurements.
+
+layer_calibration.json supplies the two equivalent local spring coefficients calibrated from the *static intact* centre-load strain on the 10 m elastic layer. Soil Young's modulus is in Pa and line-foundation stiffness is in N/m2. Interface stiffness in the continuum model is a distinct quantity. Neither dynamic reference case is used to update these coefficients.
+
+All force-uncertainty levels apply to acquisition of the static training data. The forces and prescribed foundation motions in the transfer calculations are defined deterministically. Harmonic strains are complex, dimensionless amplitudes; construct the physical signal by taking the real part after multiplication by exp(+i omega t). The pulse response is real. Relative errors are ratios, unless a percentage is explicitly stated.

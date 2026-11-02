@@ -1,0 +1,690 @@
+{
+  "counts": {
+    "datasets": 36,
+    "paths": 144,
+    "candidates": 864,
+    "starts": 1728,
+    "failed_starts": 0,
+    "incompatible": 144
+  },
+  "verification": {
+    "passed": true,
+    "incomplete": false,
+    "checked_candidates": 864,
+    "checked_paths": 144
+  },
+  "groups": [
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.15625376214172582,
+        "inferred_effective_winkler_loss_area_m": 6.912711528457448,
+        "load_RMSE": 0.06873756490699241,
+        "strain_residual_norm": 20.13063231764746
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.1470412947179604,
+        "inferred_effective_winkler_loss_area_m": 5.264573541355748,
+        "load_RMSE": 0.011507586989552456,
+        "strain_residual_norm": 28.652104362312905
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.160229123858721,
+        "inferred_effective_winkler_loss_area_m": 8.46832953258945,
+        "load_RMSE": 0.13798664957043472,
+        "strain_residual_norm": 16.32011467423774
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.1586356390508899,
+        "inferred_effective_winkler_loss_area_m": 5.288751963372279,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 28.96568630458134
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.15982003322356103,
+        "inferred_effective_winkler_loss_area_m": 8.451529236159171,
+        "load_RMSE": 0.137306830399484,
+        "strain_residual_norm": 16.32436963070401
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.14870778136294463,
+        "inferred_effective_winkler_loss_area_m": 5.550071414986414,
+        "load_RMSE": 0.11507586989552476,
+        "strain_residual_norm": 29.571641756641725
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.160229123858721,
+        "inferred_effective_winkler_loss_area_m": 8.46832953258945,
+        "load_RMSE": 0.13798664957043472,
+        "strain_residual_norm": 16.32011467423774
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.1586356390508899,
+        "inferred_effective_winkler_loss_area_m": 5.288751963372279,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 28.96568630458134
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.22587153997843756,
+        "inferred_effective_winkler_loss_area_m": 7.6124380323505125,
+        "load_RMSE": 0.028388462390843385,
+        "strain_residual_norm": 13.398179714139081
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.21882668550975048,
+        "inferred_effective_winkler_loss_area_m": 7.210802817811972,
+        "load_RMSE": 0.011507586989552456,
+        "strain_residual_norm": 15.05611352986541
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.2098865855301598,
+        "inferred_effective_winkler_loss_area_m": 8.873914279273436,
+        "load_RMSE": 0.11056898672930797,
+        "strain_residual_norm": 11.17738342802091
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.23911908941024865,
+        "inferred_effective_winkler_loss_area_m": 7.293728249876828,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 15.192901632250523
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.2054967710865687,
+        "inferred_effective_winkler_loss_area_m": 8.893817723599634,
+        "load_RMSE": 0.10427500195080995,
+        "strain_residual_norm": 11.180703381254828
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.1185356534353843,
+        "inferred_effective_winkler_loss_area_m": 7.357417540473948,
+        "load_RMSE": 0.11507586989552476,
+        "strain_residual_norm": 15.898392071928923
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.2098865855301598,
+        "inferred_effective_winkler_loss_area_m": 8.873914279273436,
+        "load_RMSE": 0.11056898672930797,
+        "strain_residual_norm": 11.17738342802091
+      }
+    },
+    {
+      "shape": "asymmetric",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.23911908941024865,
+        "inferred_effective_winkler_loss_area_m": 7.293728249876828,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 15.192901632250523
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.1541534567640632,
+        "inferred_effective_winkler_loss_area_m": 6.821178580984481,
+        "load_RMSE": 0.07074824050632536,
+        "strain_residual_norm": 20.189629169672735
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.14675820639297127,
+        "inferred_effective_winkler_loss_area_m": 5.057840016257423,
+        "load_RMSE": 0.011507586989552456,
+        "strain_residual_norm": 28.85394164679994
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.1708649286181218,
+        "inferred_effective_winkler_loss_area_m": 8.478967936477751,
+        "load_RMSE": 0.14457408696601912,
+        "strain_residual_norm": 16.407133495263196
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.15737825347378145,
+        "inferred_effective_winkler_loss_area_m": 5.074701254821669,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 29.198327502442957
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.17079394013052196,
+        "inferred_effective_winkler_loss_area_m": 8.460333464927967,
+        "load_RMSE": 0.14382805232204007,
+        "strain_residual_norm": 16.40725049860374
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.15405551062685074,
+        "inferred_effective_winkler_loss_area_m": 5.6268393378585415,
+        "load_RMSE": 0.11507586989552476,
+        "strain_residual_norm": 28.740752277618554
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.1708649286181218,
+        "inferred_effective_winkler_loss_area_m": 8.478967936477751,
+        "load_RMSE": 0.14457408696601912,
+        "strain_residual_norm": 16.407133495263196
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.15737825347378145,
+        "inferred_effective_winkler_loss_area_m": 5.074701254821669,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 29.198327502442957
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.21877791816714162,
+        "inferred_effective_winkler_loss_area_m": 7.441820338428434,
+        "load_RMSE": 0.02734086033595788,
+        "strain_residual_norm": 13.33534740611494
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.21638367977124232,
+        "inferred_effective_winkler_loss_area_m": 6.858421614614146,
+        "load_RMSE": 0.011507586989552456,
+        "strain_residual_norm": 14.626291817428667
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.19889169444901306,
+        "inferred_effective_winkler_loss_area_m": 9.19822591586702,
+        "load_RMSE": 0.1240480810915541,
+        "strain_residual_norm": 10.283864419088061
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.23273523733832432,
+        "inferred_effective_winkler_loss_area_m": 6.928758393042568,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 14.77495175243163
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.19609510567012722,
+        "inferred_effective_winkler_loss_area_m": 9.156025517888494,
+        "load_RMSE": 0.12099610858844403,
+        "strain_residual_norm": 10.286708957012534
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.1204156751960696,
+        "inferred_effective_winkler_loss_area_m": 7.252285919182218,
+        "load_RMSE": 0.11507586989552476,
+        "strain_residual_norm": 14.604944863554191
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.19889169444901306,
+        "inferred_effective_winkler_loss_area_m": 9.19822591586702,
+        "load_RMSE": 0.1240480810915541,
+        "strain_residual_norm": 10.283864419088061
+      }
+    },
+    {
+      "shape": "broad_shallow",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.23273523733832432,
+        "inferred_effective_winkler_loss_area_m": 6.928758393042568,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 14.77495175243163
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.15321994895232324,
+        "inferred_effective_winkler_loss_area_m": 6.626839161736097,
+        "load_RMSE": 0.07350776274070965,
+        "strain_residual_norm": 21.03161369817713
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.14692285451310655,
+        "inferred_effective_winkler_loss_area_m": 4.843341910657717,
+        "load_RMSE": 0.011507586989552456,
+        "strain_residual_norm": 29.79484058973342
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.1815007308136744,
+        "inferred_effective_winkler_loss_area_m": 8.476602848522212,
+        "load_RMSE": 0.15545361055780757,
+        "strain_residual_norm": 16.696586433335906
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.01,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.15741016354084222,
+        "inferred_effective_winkler_loss_area_m": 4.830745214861571,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 30.1601321793462
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.1812829374352846,
+        "inferred_effective_winkler_loss_area_m": 8.454345717860365,
+        "load_RMSE": 0.15453461617469005,
+        "strain_residual_norm": 16.696743206897796
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.15577799197590345,
+        "inferred_effective_winkler_loss_area_m": 5.410777878889615,
+        "load_RMSE": 0.11507586989552476,
+        "strain_residual_norm": 29.171381981495813
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.1815007308136744,
+        "inferred_effective_winkler_loss_area_m": 8.476602848522212,
+        "load_RMSE": 0.15545361055780757,
+        "strain_residual_norm": 16.696586433335906
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 50000000.0,
+      "tau": 0.1,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.15741016354084222,
+        "inferred_effective_winkler_loss_area_m": 4.830745214861571,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 30.1601321793462
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.21637840926552623,
+        "inferred_effective_winkler_loss_area_m": 6.67453323555163,
+        "load_RMSE": 0.029377169351802537,
+        "strain_residual_norm": 14.241129488752366
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.21837913173616938,
+        "inferred_effective_winkler_loss_area_m": 6.333351612966172,
+        "load_RMSE": 0.011507586989552456,
+        "strain_residual_norm": 15.71008301808112
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.19005708644831687,
+        "inferred_effective_winkler_loss_area_m": 9.0075463834715,
+        "load_RMSE": 0.15121611766615478,
+        "strain_residual_norm": 10.678738923377333
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.01,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.23572841172831882,
+        "inferred_effective_winkler_loss_area_m": 6.285507775960063,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 15.92109540232768
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "calibrated",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.18911157163020842,
+        "inferred_effective_winkler_loss_area_m": 8.931575042326838,
+        "load_RMSE": 0.14532308627368787,
+        "strain_residual_norm": 10.679918139360492
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "fixed",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.15206733510617632,
+        "inferred_effective_winkler_loss_area_m": 6.869679586812811,
+        "load_RMSE": 0.11507586989552476,
+        "strain_residual_norm": 15.018805037287654
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "free",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.19005708644831687,
+        "inferred_effective_winkler_loss_area_m": 9.0075463834715,
+        "load_RMSE": 0.15121611766615478,
+        "strain_residual_norm": 10.678738923377333
+      }
+    },
+    {
+      "shape": "intact",
+      "soil_E_Pa": 200000000.0,
+      "tau": 0.1,
+      "method": "oracle",
+      "n": 3,
+      "incompatible": 3,
+      "metrics": {
+        "unused_load_strain_relative_L2": 0.23572841172831882,
+        "inferred_effective_winkler_loss_area_m": 6.285507775960063,
+        "load_RMSE": 0.0,
+        "strain_residual_norm": 15.92109540232768
+      }
+    }
+  ]
+}

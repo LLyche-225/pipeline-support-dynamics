@@ -1,0 +1,52 @@
+[
+  {
+    "ratio": 0.0,
+    "channel": "force",
+    "error": 0.0002637697320445338
+  },
+  {
+    "ratio": 0.0,
+    "channel": "base",
+    "error": 1.2735601550741429e-05
+  },
+  {
+    "ratio": 0.25,
+    "channel": "force",
+    "error": 0.00025787838735355474
+  },
+  {
+    "ratio": 0.25,
+    "channel": "base",
+    "error": 1.2758065061148948e-05
+  },
+  {
+    "ratio": 0.75,
+    "channel": "force",
+    "error": 0.00019971797166095417
+  },
+  {
+    "ratio": 0.75,
+    "channel": "base",
+    "error": 1.3115566498859692e-05
+  },
+  {
+    "ratio": 1.0,
+    "channel": "force",
+    "error": 8.146276326501288e-05
+  },
+  {
+    "ratio": 1.0,
+    "channel": "base",
+    "error": 1.4843772431303314e-05
+  },
+  {
+    "ratio": 1.15,
+    "channel": "force",
+    "error": 0.00012478788383178864
+  },
+  {
+    "ratio": 1.15,
+    "channel": "base",
+    "error": 5.35209311727068e-05
+  }
+]

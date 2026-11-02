@@ -1,0 +1,9 @@
+{
+  "count": 1536,
+  "max_raw_replay_error": 3.552713678800501e-15,
+  "max_independent_skfem_score_difference": 2.031437991945051e-05,
+  "rows_above_one": 67,
+  "worst": 28.883139862473428,
+  "worst_key": "shape-intact_tau-0.10000000000000001_sigma-5.0000000000000004e-06_sensors-20_seed-1101__method-fixed",
+  "worst_static_compatible": false
+}

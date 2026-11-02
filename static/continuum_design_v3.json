@@ -1,0 +1,41 @@
+{
+  "status": "design_frozen_before_continuum_inversion_mesh_acceptance_pending",
+  "interpretation": "Idealized surface beam coupled to a plane-strain elastic layer via bilateral vertical springs; numerical model-discrepancy test, not buried-pipe experimental validation",
+  "soil_E_Pa": [50000000, 200000000],
+  "soil_nu": 0.3, "out_of_plane_width_m": 0.6,
+  "layer_depth_m": 10, "half_domain_m": 50,
+  "interface_stiffness_N_m2": 36000000,
+  "reference_h_m": 0.125, "reference_dz_m": 0.125,
+  "mesh_check_sizes_m": [0.5, 0.25, 0.125],
+  "mesh_check_shapes": ["intact", "asymmetric"],
+  "mesh_acceptance": {
+    "last_strain_rms_change_microstrain_max": 0.5,
+    "last_strain_relative_L2_change_max": 0.01,
+    "extent_check_half_domain_m": 60,
+    "extent_check_h_m": 0.25,
+    "extent_strain_rms_change_microstrain_max": 0.05,
+    "force_and_energy_relative_max": 0.00000001
+  },
+  "equivalent_winkler_calibration": {
+    "state": "intact interface only, known force, central load only",
+    "sensors": 61, "interval_m": [-12, 12],
+    "observations": "noiseless continuum finite-gauge strains",
+    "objective": "sum squared differences to intact inverse-model strains",
+    "parameter": "log(k0_N_m2)", "bounds_N_m2": [100000, 1000000000],
+    "forbidden": "No defective-state or unused-load response may choose k0 or other settings"
+  },
+  "inversion": {
+    "shapes": ["intact", "asymmetric", "broad_shallow"],
+    "tau": [0.01, 0.1], "seeds": [1201, 1202, 1203],
+    "sensors_per_load": 20, "strain_sigma": 0.000005,
+    "methods": ["fixed", "free", "calibrated", "oracle"],
+    "same_H1_path_and_starts_as": "study_design_v3.json",
+    "calibration_measurements": "1+tau*z with independent uniform unit-standard-deviation z using SeedSequence([seed,831])",
+    "data_count": 36, "path_count": 144, "candidate_count": 864,
+    "force_multipliers": [1.0, 1.0, 1.0],
+    "unused_load": "Known 750kN at x=6m, evaluate 241 points from -12 to12m"
+  },
+  "scores": ["unused-load strain relative L2", "strain residual and calibration pull separately", "inferred effective loss area and maximum", "intact spurious loss", "centre of effective loss compared with imposed interface-loss centroid"],
+  "forbidden_score": "Do not compute relative support L2 by equating input interface spring loss to effective Winkler loss; they are different physical parameters",
+  "resource_limit": {"blas_threads": 1, "parallel_solves": 1, "wall_time_limit_hours": 1}
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "groups": 48,
+  "statistic_checks": 2016,
+  "replicate_checks": 2016,
+  "source_paths": 144,
+  "summary": "summaries_continuum/continuum_summary.json",
+  "results": "results_continuum"
+}

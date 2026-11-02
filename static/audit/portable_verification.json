@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "stage": "/var/folders/c6/lhjkt8gs36jdww5cpgrz9jv00000gn/T/xing-v3-independent-2blmgnp3",
+  "scope": "independent copy on same machine and interpreter",
+  "commands": [
+    {
+      "step": "tests",
+      "exit_code": 0,
+      "log": "audit/portable_tests.log"
+    },
+    {
+      "step": "main",
+      "exit_code": 0,
+      "log": "audit/portable_main.log"
+    },
+    {
+      "step": "continuum",
+      "exit_code": 0,
+      "log": "audit/portable_continuum.log"
+    },
+    {
+      "step": "endpoint",
+      "exit_code": 0,
+      "log": "audit/portable_endpoint.log"
+    },
+    {
+      "step": "load_figures",
+      "exit_code": 0,
+      "log": "audit/portable_load_figures.log"
+    },
+    {
+      "step": "continuum_figures",
+      "exit_code": 0,
+      "log": "audit/portable_continuum_figures.log"
+    },
+    {
+      "step": "verification_figure",
+      "exit_code": 0,
+      "log": "audit/portable_verification_figure.log"
+    }
+  ],
+  "pdf_pages_text_and_pixels_identical": 24,
+  "figures_pixels_identical": [
+    "confidence.png",
+    "continuum_prediction.png",
+    "continuum_reference.png",
+    "continuum_response.png",
+    "fields_prediction.png",
+    "load_quality.png",
+    "measurement_map.png",
+    "model.png",
+    "prediction_quality.png",
+    "verification.png"
+  ],
+  "source_hashes": {
+    "code/beam_inverse.py": "f59ca50a1eb94c0aacc1ebf9af3b4407e3a1430277fe32122020a6001ab4d3a6",
+    "code/green_verification.py": "b483e33c8eeaf713a3fe1fcd67cd1671d9e50254b8c0a6c63a666219611b1183",
+    "code/campaign.py": "e3058a589909bf3e997ae8525b15b7031a9d4308f32c2029e464b677a36bac33",
+    "code/make_figures.py": "ab568a33a9d7bb55311ac735785dbbcc51ec25a71003dc013fab71e2fcc2d48d",
+    "code/run_campaign.py": "0f8fd9849c8715281b3aa0c082946a7995d53b2381429473853fee42cd149198",
+    "code/run_formal.py": "02445b82ce4b535466ecbdb8611a6f8395c09a698bb59ec320a857c6dcad326d",
+    "code/shape_factory.py": "5d0c488e349a27faaa38c34a546c22018dd626f3bc5e61c5a286fedf03e7e660",
+    "code/skfem_reference.py": "f2fbf5e0d5956b7b1c0a7602aaf3f8ee20453d2307265796c9935b14f43e9bb6",
+    "code/verification.py": "ca20628bfd338b44dc9bedcad69821c97bdbebb3babfcca60d16d392c908b3d6",
+    "code/continuum_reference.py": "0b19a995470695a9a9707421916e6760acc989d139165970224fca4e2b83cfc8",
+    "code/run_load_information.py": "1784d31f2fab2cfcd74e022db8c97e6cac1b720c9c6fb8255c26e7c56fbc5479",
+    "code/make_load_information_figures.py": "05945bc22e6c82f3d979585a907c07034e433b1631ab2b8796f2fc47eaeeb206",
+    "code/make_continuum_figures.py": "b717e56962764af31ca243be1d90339348dee7de307e18381f8307e8ece2aa20",
+    "code/run_continuum_study.py": "c31a5d17dc8b7f6aabc8fe65c70bbacee417b7e65a5f9fbb47ccf3cd80d39cc2",
+    "code/check_regularization_endpoint.py": "07f60ad354bac5bb1debb41a2e1b34e99b6b77cf228ad1e056400b23622c1e81",
+    "tests/test_beam_inverse.py": "022d9866e7d10a2dab5b68069cba49cd0255fb08195fce17fdf940b6a2554606",
+    "tests/test_campaign.py": "4618c26cacf932525b9cbc6f19e2f05eeba2262c38c16bae39e34518fa8c3449",
+    "tests/test_runner.py": "d29c30b61b8817f17dd5bb9502ff91488a2a6d1c278d98647d71bff35d88fbb5",
+    "tests/test_load_information.py": "977c1bc28ef67e3a6e8dc597403974f34b8443e3b7067defdf77d3dd7d671e84",
+    "tests/test_load_information_runner.py": "1e89b7a790017b40e70a6f0457f4c0e3e246396a0fe248259edb3c716f067e5c",
+    "tests/test_continuum_reference.py": "bec73cef44bff5c8255fb64e20d381543970824871748d79caf75b263f799cf8",
+    "tests/test_load_information_figures.py": "1130dfba490305e2767db72b9d1dc05a6522373f661d070dd28bb381d4d02399",
+    "tests/test_continuum_study.py": "40a1852ab650037123d50834155c07d61eb489d696be41d867867b5b12223a34",
+    "tests/test_continuum_figures.py": "74a17f9ba2ff86af2adcd3f1e68dac3733d0f80c22fc432bd65f47c9a204c095",
+    "tests/test_regularization_endpoint.py": "6280644e5268f36ef9bd36817b81e3f4f816b4783de18464127cfe5671c0319a"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "dynamic-layer-calibration-input-v1",
+  "calibrations": [
+    {
+      "label": "E50MPa",
+      "soil_E_Pa": 50000000.0,
+      "k0_N_m2": 4899684.222523651,
+      "source_file": "results_continuum/calibration/E50MPa.json",
+      "source_sha256": "39e2a0ff6e7887e26f10b7fdafd43de53798395b6fe11d4565ac5232eb33bff4",
+      "design_hash": "2fd55030e3f0d058ca43753f8ca74d2f578e8f11ff7f5fde2096e5f92f204e2a",
+      "protocol_hash": "d5d9e50ba5ec6c8b013462b1ab3aafa2151fc4d40377ed99d66f699c0cb42d4f",
+      "source_hash": "3512dc1515fc579c46a596594819d51e7a579865e1ab4d09762b619b6c250705"
+    },
+    {
+      "label": "E200MPa",
+      "soil_E_Pa": 200000000.0,
+      "k0_N_m2": 15445936.257682828,
+      "source_file": "results_continuum/calibration/E200MPa.json",
+      "source_sha256": "c5d55ff8964d8f397545435cb74c8782b8e80546172722c29963b1044db7c03f",
+      "design_hash": "2fd55030e3f0d058ca43753f8ca74d2f578e8f11ff7f5fde2096e5f92f204e2a",
+      "protocol_hash": "d5d9e50ba5ec6c8b013462b1ab3aafa2151fc4d40377ed99d66f699c0cb42d4f",
+      "source_hash": "3512dc1515fc579c46a596594819d51e7a579865e1ab4d09762b619b6c250705"
+    }
+  ]
+}
